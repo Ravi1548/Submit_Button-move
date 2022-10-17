@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="outer">
+    <div id="inner">
+    <label>Username: </label><input type="text" id="input1" placeholder="enter username"><br>
+    <label>Password: </label><input type="password" id="input2" placeholder="enter password (min 5)"><br>
+    <div id="btndiv">
+    <button type="submit" id="btn" onmouseover="game()" onclick="alert('Thanks!! Be Deciplined always 😂😂')"> Submit</button>
+</div>
+</div>
+</div>
+<script defer>
+
+    var btnn= document.getElementById("btn");
+    var uinput = document.getElementById("input1");
+    var upswrd = document.getElementById("input2");
+    var isOriginPos = true;
+    var isValid = false;
+    
+
+    function game()
+    {
+        if( (uinput.value == "") || (upswrd.value == "") || (upswrd.value.length<5))
+        {
+            isValid = false;
+        }
+        else
+        {
+            isValid = true;
+        
+        }
+        
+        
+
+        if(!isValid)
+        {
+            if(isOriginPos)
+            {
+                btnn.style.transform = "translate(-200px)";
+                btnn.style.transitionDuration = "0.2s";
+                isOriginPos=false;
+            }
+            else
+            {
+                btnn.style.transform = "translate(0px)";
+                btnn.style.transitionDuration = "0.2s";
+                isOriginPos=true;
+            }
+        }
+
+    }
+
+    // function hover(){
+        
+
+    //     if((uinput.value != null )&&(upswrd.value != null) ){
+    //        isValid = true; 
+
+    //     }else{
+    //         isValid = false;
+    //     }
+
+       
+     
+    //  if(!isValid){
+
+    //     if(isLeft){
+    //         btnn.style.transform = "translate(-200px)";
+    //         btnn.style.transitionDuration = "0.2s";
+    //         isLeft=false;
+
+    //     }else{
+    //         btnn.style.transform = "translate(0px)";
+    //         btnn.style.transitionDuration = "0.2s";
+    //         isLeft=true;
+    //     }
+    //    }
+    // }
+
+    
+</script>
+</body>
+</html>

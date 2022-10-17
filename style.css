@@ -1,0 +1,23 @@
+#outer{
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+
+}
+#inner{
+
+}
+input ,label{
+    margin: 1rem;
+}
+#btndiv{
+    display: flex;
+    /* border: 1px solid black; */
+}
+/* button:hover {
+    transform: translateX(200px);
+    /* transition-duration: 4ms; */
+  /* } */ 
+  button{
+     margin-left: 13rem;
+  }
